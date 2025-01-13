@@ -1,0 +1,303 @@
+:root {
+  --primary-color: #4da6e6;
+  --background-color: #0d0f11;
+  --secondary-background-color: #13191e;
+  --secondary-color: #cfab4a;
+  --text-color: #ccc;
+  --border-radius: 9px;
+  --default-font-size: medium;
+  scrollbar-width: 9px;
+  scrollbar-color: var(--primary-color) var(--background-color);
+}
+
+@font-face {
+  font-family: vazir;
+  src: url("../Vazirmatn-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  color: var(--text-color) !important;
+  background-color: var(--background-color) !important;
+  font-family: "vazir" !important;
+}
+ol {
+  padding-right: 20px;
+}
+ul {
+  list-style: none;
+}
+pre {
+  padding: 19px;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 19px 0px 19px 0px;
+  direction: ltr;
+  font-size: xx-large;
+  background-color: var(--secondary-background-color) !important;
+}
+code {
+  border-radius: var(--border-radius);
+  color: var(--primary-color);
+}
+blockquote {
+  font-style: italic;
+  border-right: 9px solid var(--primary-color);
+  padding-right: 20px;
+  margin: 20px 0;
+  background: var(--secondary-background-color);
+  border-radius: var(--border-radius);
+}
+
+p {
+  line-height: 22pt;
+  text-align: justify;
+}
+
+footer {
+  z-index: 1000;
+  border-top: 1px solid var(--primary-color);
+  position: fixed;
+  width: 100%;
+  text-align: right;
+  padding: 3px;
+  font-size: small;
+  font-weight: bold;
+  bottom: 0;
+  left: 0;
+  color: var(--primary-color);
+  background-color: var(--secondary-background-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  position: static;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-background-color);
+  padding: 9px 0;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--default-font-size);
+  padding: 10px 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav ul li a:hover,
+.container a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+nav .logo {
+  color: var(--primary-color);
+  font-size: var(--default-font-size);
+  font-weight: bold;
+  padding-right: 20px;
+  float: right;
+}
+.container ul li {
+  padding-top: 19px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 9px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--text-color),
+    var(--primary-color)
+  );
+  margin: 20px 0;
+  padding: 2px;
+}
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  font-size: var(--default-font-size);
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid var(--primary-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  font-weight: bold;
+  color: var(--secondary-background-color);
+}
+tr:nth-child(even) {
+  background-color: var(--secondary-background-color);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked::before {
+  content: "✔";
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  padding: 2px;
+}
+
+.title {
+  text-align: right;
+  margin: 9px;
+  color: var(--primary-color);
+}
+
+.container p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--border-radius);
+}
+.container a {
+  padding: 7px 7px;
+  margin-right: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-right: 9px solid var(--primary-color);
+  background: var(--secondary-background-color);
+  border-radius: var(--border-radius);
+}
+
+.text {
+  font-size: var(--default-font-size);
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  font-size: var(--default-font-size);
+  padding: 33px;
+}
+.container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  max-width: 1920px;
+  width: 100%;
+  padding: 9px;
+}
+.card {
+  background-color: var(--secondary-background-color);
+  padding: 9px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin: 3px;
+  z-index: 100;
+}
+.card p {
+  font-size: var(--default-font-size);
+}
+
+.card a {
+  font-size: var(--default-font-size);
+  font-weight: bold;
+  display: block;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.breadcrumb ol {
+  padding-left: 0;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "»";
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  list-style-type: none;
+}
+.tag,
+.badge {
+  padding: 6px;
+  font-size: xx-small;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tag:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin: 1px 1px 0px 1px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1px;
+}
