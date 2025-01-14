@@ -304,7 +304,7 @@ input[type="checkbox"]:checked::before {
 
 .pagination {
   direction: rtl;
-  margin: 0 auto;
+  margin-bottom: 30px;
 }
 .pagination .page-item {
   display: inline-block;
