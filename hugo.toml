@@ -3,6 +3,7 @@ languageCode = 'fa'
 title = 'قالب GameDevFarsi'
 
 defaultContentLanguage = 'fa'
+buildDrafts=true
 
 [Languages]
   [Languages.fa]
