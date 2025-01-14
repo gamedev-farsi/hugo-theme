@@ -114,7 +114,8 @@ nav ul li a {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 nav ul li a:hover,
-.container a:hover {
+.container a:hover,
+a.active {
   background-color: var(--primary-color);
   color: white;
 }
@@ -300,4 +301,30 @@ input[type="checkbox"]:checked::before {
   background-repeat: no-repeat;
   background-position: center;
   padding: 1px;
+}
+
+.pagination {
+  direction: rtl;
+  margin: 0 auto;
+}
+.pagination .page-item {
+  display: inline-block;
+}
+
+.page-item a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--default-font-size);
+  padding: 9px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: none;
+}
+.page-item.active a {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+}
+
+.page-item.disabled a {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
