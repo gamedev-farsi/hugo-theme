@@ -364,7 +364,36 @@ video {
   }
   .footer-logo {
     height: 14px;
-    
   }
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  content: attr(title);
+  visibility: hidden;
+  background-color: var(--secondary-background-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 9px;
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.tooltip:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
