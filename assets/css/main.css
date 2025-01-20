@@ -149,6 +149,8 @@ h6 {
   color: var(--primary-color);
   font-weight: bold;
   padding: 9px;
+  border-right: 1px solid var(--primary-color);
+  margin-bottom: 9px;
 }
 
 hr {
@@ -296,7 +298,8 @@ video {
 .tag,
 .badge {
   padding: 6px;
-  font-size: xx-small;
+  margin:3px;
+  font-size: small;
   border: 1px solid var(--primary-color);
   border-radius: var(--border-radius);
   transition: background-color 0.3s, transform 0.3s;
@@ -345,6 +348,10 @@ video {
 }
 
 @media (max-width: 768px) {
+  .tag,
+  .badge {
+    display: block;
+  }
   pre {
     font-size: large;
   }
